@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="Digest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Staff" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="PayrollNumber" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                            <xs:element name="Delete" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Information" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="StartDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="EndDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Addition" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Information" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="StartDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="EndDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Update" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Information" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="StartDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="EndDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Clash" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Information" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="StartDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="EndDateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

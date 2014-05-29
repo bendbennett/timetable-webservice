@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="VCALENDAR">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="PRODID" type="xs:string"/>
+                <xs:element name="VERSION" type="xs:string"/>
+                <xs:element name="CALSCALE" type="xs:string"/>
+                <xs:element name="METHOD" type="xs:string"/>
+                <xs:element name="X-WR-CALNAME" type="xs:string"/>
+                <xs:element name="SCI_TIMESTAMP" type="xs:string"/>
+                <xs:element name="VEVENTS" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="VEVENT" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="DTSTART" type="xs:string"/>
+                                        <xs:element name="DTEND" type="xs:string"/>
+                                        <xs:element name="DTSTAMP" type="xs:string"/>
+                                        <xs:element name="UID" type="xs:string"/>
+                                        <xs:element name="SCI_SERIES" type="xs:string"/>
+                                        <xs:element name="SUMMARY" type="xs:string"/>
+                                        <xs:element name="DESCRIPTION" type="xs:string"/>
+                                        <xs:element name="LOCATION" type="xs:string"/>
+                                        <xs:element name="VALARM">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="TRIGGER" type="xs:string"/>
+                                                    <xs:element name="ACTION" type="xs:string"/>
+                                                    <xs:element name="DESCRIPTION" type="xs:string"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
+
+

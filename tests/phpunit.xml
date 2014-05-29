@@ -1,0 +1,50 @@
+<phpunit bootstrap="./bootstrap.php" colors="true">
+
+	<!-- Settings for Integration Testing - varies depending on whether looking at \DEV (e.g., 2012), TEST (e.g., 2010 & 2011) or LIVE (e.g., 2011) -->
+	<php>
+		<const name="YEAR" value="2014" />
+		<const name="APPLICATION_ENV" value="testing" />
+	</php>
+	
+
+	<testsuite name="Timetabling Web Service Test Suite">
+		<directory>./</directory>
+	</testsuite>
+
+
+	<filter>
+		<blacklist>
+			<directory suffix=".php">../ZendFramework
+			</directory>
+		</blacklist>
+		<whitelist>
+			<directory suffix=".php">../application/</directory>
+			<exclude>
+				<directory suffix=".phtml">../application/</directory>
+			</exclude>
+			<exclude>
+				<directory suffix=".php">../application/library/plugins</directory>
+			</exclude>
+		</whitelist>
+	</filter>
+
+<!--
+	<logging>
+		<log type="coverage-html" target="./test-reports-local/report"
+			charset="UTF-8" yui="true" highlight="false" lowUpperBound="35"
+			highLowerBound="70" />
+		<log type="coverage-xml" target="./test-reports-local/coverage.xml" />
+		<log type="graphviz" target="./test-reports-local/logfile.dot" />
+		<log type="json" target="./test-reports-local/logfile.json" />
+		<log type="metrics-xml" target="./test-reports-local/metrics.xml" />
+		<log type="plain" target="./test-reports-local/logfile.txt" />
+		<log type="pmd-xml" target="./test-reports-local/pmd.xml"
+			cpdMinLines="5" cpdMinMatches="70" />
+		<log type="tap" target="./test-reports-local/logfile.tap" />
+		<log type="test-xml" target="./test-reports-local/logfile.xml"
+			logIncompleteSkipped="false" />
+		<log type="testdox-html" target="./test-reports-local/testdox.html" />
+		<log type="testdox-text" target="./test-reports-local/testdox.txt" />
+	</logging>
+-->
+</phpunit>

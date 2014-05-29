@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="Data">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="calendars">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="calendar">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="calendarpath" type="xs:string"/>
+                                        <xs:element name="category" type="xs:string"/>
+                                        <xs:element name="identity" type="xs:string"/>
+                                        <xs:element name="startdate" type="xs:integer"/>
+                                        <xs:element name="enddate" type="xs:integer"/>
+                                        <xs:element name="clashcheck" type="xs:boolean"/>
+                                        <xs:element name="notifications">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="notification">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="addition">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="enddate" type="xs:string"/>
+                                                                        <xs:attribute name="startdate" type="xs:string"/>
+                                                                        <xs:attribute name="enabled" type="xs:boolean"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="update">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="enddate" type="xs:string"/>
+                                                                        <xs:attribute name="startdate" type="xs:string"/>
+                                                                        <xs:attribute name="enabled" type="xs:boolean"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="deletion">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="enddate" type="xs:string"/>
+                                                                        <xs:attribute name="startdate" type="xs:string"/>
+                                                                        <xs:attribute name="enabled" type="xs:boolean"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="reset">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="enddate" type="xs:string"/>
+                                                                        <xs:attribute name="startdate" type="xs:string"/>
+                                                                        <xs:attribute name="enabled" type="xs:boolean"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="clash">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="enddate" type="xs:string"/>
+                                                                        <xs:attribute name="startdate" type="xs:string"/>
+                                                                        <xs:attribute name="enabled" type="xs:boolean"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="name" type="xs:string"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <!--
+            <xs:complexType>
+            <xs:sequence>
+            <xs:element name="calendars">
+            <xs:complexType>
+            <xs:sequence>
+            <xs:element name="calendar">
+                <xs:complexType>
+                    <xs:sequence>
+
+                        <xs:element name="subject" minOccurs="0" maxOccurs="unbounded">
+
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="GUID" type="xs:string"/>
+                                    <xs:element name="Report" type="xs:string"/>
+                                    <xs:element name="Parameters" type="xs:string"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                        <xs:element name="subjects">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="subject" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="id" type="xs:string"/>
+                                                <xs:element name="url" type="xs:string"/>
+                                            </xs:sequence>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+                -->
+    </xs:element>
+</xs:schema>

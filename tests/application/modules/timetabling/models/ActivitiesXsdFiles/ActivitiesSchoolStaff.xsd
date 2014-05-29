@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="Activities">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="School" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Description" type="xs:string"/>
+                            <xs:element name="Guid" type="xs:string"/>
+                            <xs:element name="Module" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Code" type="xs:string"/>
+                                        <xs:element name="Description" type="xs:string"/>
+                                        <xs:element name="Guid" type="xs:string"/>
+                                        <xs:element name="Activity" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Code" type="xs:string"/>
+                                                    <xs:element name="Description" type="xs:string"/>
+                                                    <xs:element name="Guid" type="xs:string"/>
+                                                    <xs:element name="Type" type="xs:string"/>
+                                                    <xs:element name="Week" type="xs:integer"/>
+                                                    <xs:element name="Weekday" type="xs:string"/>
+                                                    <xs:element name="Date">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Day" type="xs:integer"/>
+                                                                <xs:element name="Month" type="xs:integer"/>
+                                                                <xs:element name="Year" type="xs:integer"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="StartTime">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Hours" type="xs:integer"/>
+                                                                <xs:element name="Minutes" type="xs:integer"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="EndTime">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Hours" type="xs:integer"/>
+                                                                <xs:element name="Minutes" type="xs:integer"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Locations">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Location" minOccurs="0" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Name" type="xs:string"/>
+                                                                            <xs:element name="AbbreviatedName" type="xs:string"/>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Staff">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="Person" minOccurs="0" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Name" type="xs:string"/>
+                                                                            <xs:element name="Guid" type="xs:string"/>
+                                                                            <xs:element name="School">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="Name" type="xs:string"/>
+                                                                                        <xs:element name="Guid" type="xs:string"/>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="Shared">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="School" minOccurs="0" maxOccurs="unbounded">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="Name" type="xs:string"/>
+                                                                            <xs:element name="Guid" type="xs:string"/>
+                                                                            <xs:element name="Module" maxOccurs="unbounded">
+                                                                            <xs:complexType>
+                                                                                <xs:sequence>
+                                                                                    <xs:element name="Code" type="xs:string"/>
+                                                                                    <xs:element name="Description" type="xs:string"/>
+                                                                                    <xs:element name="Guid" type="xs:string"/>
+                                                                                    <xs:element name="Activity">
+                                                                                        <xs:complexType>
+                                                                                            <xs:sequence>
+                                                                                                <xs:element name="Code" type="xs:string"/>
+                                                                                                <xs:element name="Description" type="xs:string"/>
+                                                                                                <xs:element name="Guid" type="xs:string"/>
+                                                                                            </xs:sequence>
+                                                                                        </xs:complexType>
+                                                                                    </xs:element>
+                                                                                </xs:sequence>
+                                                                            </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
